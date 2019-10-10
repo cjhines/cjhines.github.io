@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.718e370a.chunk.css",
-    "main.js": "/static/js/main.da79b637.chunk.js",
-    "main.js.map": "/static/js/main.da79b637.chunk.js.map",
+    "main.css": "/static/css/main.57522a10.chunk.css",
+    "main.js": "/static/js/main.4775365c.chunk.js",
+    "main.js.map": "/static/js/main.4775365c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e3206f37.js",
     "runtime-main.js.map": "/static/js/runtime-main.e3206f37.js.map",
     "static/js/2.2de37cf2.chunk.js": "/static/js/2.2de37cf2.chunk.js",
     "static/js/2.2de37cf2.chunk.js.map": "/static/js/2.2de37cf2.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.59395b1868e7bef3726ba23992e40868.js": "/precache-manifest.59395b1868e7bef3726ba23992e40868.js",
+    "precache-manifest.ca2327498f6d527ca885faeb67732ba9.js": "/precache-manifest.ca2327498f6d527ca885faeb67732ba9.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.718e370a.chunk.css.map": "/static/css/main.718e370a.chunk.css.map",
-    "static/media/Nunito-Regular.ttf": "/static/media/Nunito-Regular.e9f64790.ttf"
+    "static/css/main.57522a10.chunk.css.map": "/static/css/main.57522a10.chunk.css.map"
   }
 }
