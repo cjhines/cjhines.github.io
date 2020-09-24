@@ -1,13 +1,20 @@
 {
-  "name": "cjhines.github.io",
-  "version": "0.1.0",
+  "name": "cjhin.es",
+  "version": "1.0.0",
   "private": true,
-  "homepage": "https://cjhines.github.io/",
+  "homepage": "https://cjhin.es",
+  "license": "UNLICENSED",
   "dependencies": {
+    "@types/jest": "^26.0.5",
+    "@types/node": "^14.0.24",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
     "gh-pages": "^2.1.1",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.10.0",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "typescript": "^3.9.7"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,5 +38,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0"
   }
 }

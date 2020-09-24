@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CJ Hines</title>
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png" />
+    <title>Chris Hines</title>
+    <meta name="Description" content="Chris Hines. Software Engineer @ Berlin">
     <meta charset="utf-8" />
+    <meta name="author" content="Chris Hines">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-
+    <!-- Suggested color for customising browser UI. Eg: Title bar on mobile -->
+    <meta name="theme-color" content="#F44336" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png" />
+    <!-- %PUBLIC_URL% will be replaced with the URL of the `public` folder during the build. -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <!-- Preload resources -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Nunito&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <!-- Fallback regular resource load -->
+    <noscript>
+      <link
+          href="https://fonts.googleapis.com/css?family=Nunito&display=swap"
+          rel="stylesheet"
+          type="text/css"
+      />
+    </noscript>
   </head>
   <body>
-    <noscript>You will need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
 </html>

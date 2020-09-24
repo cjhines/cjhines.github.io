@@ -1,0 +1,39 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules":  {
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx", ".pdf"] }],
+    "max-len": ["error", { "code": 120 }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never",
+        "pdf": "never"
+      }
+   ],
+   "lines-between-class-members": [
+    "error",
+    "always",
+    { "exceptAfterSingleLine": true }
+  ]
+  },
+  "plugins": [],
+  "env": {
+    "browser": true,
+    "jest": true
+  }
+}
