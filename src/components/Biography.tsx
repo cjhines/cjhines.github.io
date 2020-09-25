@@ -20,7 +20,7 @@ const Biography: React.FunctionComponent = () => (
         style={imageStyle}
       />
       <h1>
-        {'I\'m Chris, a Berlin-based software developer that\'spassionate about building unique web and mobile applications.'}
+        {'I\'m Chris, a Berlin-based software developer that\'s passionate about building unique web and mobile applications.'}
       </h1>
       <br />
       <h1>
