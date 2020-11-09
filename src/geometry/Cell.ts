@@ -21,11 +21,10 @@ const configurations = [
     range: { min: 1, max: 10 },
   },
   {
-    colour: '#F44336',
+    colour: '#FFC107',
     radius: 80,
     pointCount: 20,
     range: { min: 1, max: 3 },
-    compositionOperation: 'xor',
   },
 ];
 
