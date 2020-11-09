@@ -33,7 +33,7 @@ const configurations = [
 export default class {
   circles: Array<Circle>;
 
-  // Intiialise with canvas and dimensions
+  // Initialise with canvas and dimensions
   constructor(canvas: CanvasRenderingContext2D, width: number, height: number) {
     const x = width / 2;
     const y = height / 2;
