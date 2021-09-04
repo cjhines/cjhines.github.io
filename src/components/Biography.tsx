@@ -24,7 +24,7 @@ const Biography: React.FunctionComponent = () => (
       </h1>
       <br />
       <h1>
-        {'I\'m currently accepting interview invitations for full-time frontend positions. Feel free to '}
+        {'I\'m always open for collaborations or interesting ventures. Feel free to '}
         <a href={CV} rel="noopener noreferrer" target="_blank">
           view my CV
         </a>
