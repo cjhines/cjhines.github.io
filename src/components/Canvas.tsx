@@ -1,10 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
+
 import Cell from '../geometry/Cell';
 import useCanvas from '../hooks/useCanvas';
 import '../App.scss';
 
 type Props = {
-  children: React.ReactNode,
+  children: React.ReactNode;
 };
 
 const Canvas: React.FunctionComponent<Props> = ({ children }: Props) => {
@@ -17,7 +18,11 @@ const Canvas: React.FunctionComponent<Props> = ({ children }: Props) => {
   function animate(timestamp: number) {
     timestampRef.current = timestamp;
     const context = canvasRef.current.getContext('2d');
-    const cell = new Cell(context, sizeRef.current.width, sizeRef.current.height);
+    const cell = new Cell(
+      context,
+      sizeRef.current.width,
+      sizeRef.current.height
+    );
 
     // Recursive function. Only loops latest scaled canvas.
     const animateCell = () => {

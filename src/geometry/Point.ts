@@ -1,21 +1,21 @@
 import utils from './utils';
 
 type Arguments = {
-  x: number,
-  y: number,
-  range: Range,
-  canvas: CanvasRenderingContext2D
-}
+  x: number;
+  y: number;
+  range: Range;
+  canvas: CanvasRenderingContext2D;
+};
 
 type Coordinate = {
-  x: number,
-  y: number,
+  x: number;
+  y: number;
 };
 
 type Range = {
-  min: number,
-  max: number,
-}
+  min: number;
+  max: number;
+};
 
 const randomDuration = () => utils.random(100, 5000);
 
@@ -28,18 +28,13 @@ export default class Point {
   range: Range;
   springTarget: Coordinate;
   time: Date;
-  springLength : number;
+  springLength: number;
   duration: number;
   friction: number;
   direction: number;
   k: number;
 
-  constructor({
-    x,
-    y,
-    range,
-    canvas,
-  }: Arguments) {
+  constructor({ x, y, range, canvas }: Arguments) {
     this.canvas = canvas;
     this.anchor = { x, y };
     this.position = { x, y };
@@ -54,7 +49,8 @@ export default class Point {
     this.setAngle(this.direction);
   }
 
-  getSpeed = (): number => Math.sqrt(this.vel.x * this.vel.x + this.vel.y * this.vel.y);
+  getSpeed = (): number =>
+    Math.sqrt(this.vel.x * this.vel.x + this.vel.y * this.vel.y);
 
   setSpeed(speed: number): void {
     const angle = this.getAngle();
@@ -70,7 +66,8 @@ export default class Point {
     this.vel.y = Math.sin(angle) * speed;
   }
 
-  target = (x: number, y: number): number => Math.atan2(y - this.position.y, x - this.position.x);
+  target = (x: number, y: number): number =>
+    Math.atan2(y - this.position.y, x - this.position.x);
 
   refresh(): void {
     this.vel.x *= this.friction;

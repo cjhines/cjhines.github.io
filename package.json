@@ -31,6 +31,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "npm run lint -- --fix",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -b master -d build"
   },

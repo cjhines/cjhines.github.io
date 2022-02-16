@@ -1,9 +1,9 @@
 import React from 'react';
 
 type Props = {
-  svg: Array<{ d: string }>,
-  url: string,
-  label: string,
+  svg: { d: string }[];
+  url: string;
+  label: string;
 };
 
 const style = {
@@ -17,19 +17,17 @@ const style = {
   alignItems: 'center',
 } as React.CSSProperties;
 
-const SocialBar: React.FunctionComponent<Props> = ({ svg, url, label }: Props) => (
+const SocialBar: React.FunctionComponent<Props> = ({
+  svg,
+  url,
+  label,
+}: Props) => (
   <a href={url} aria-label={label} rel="noopener noreferrer" target="_blank">
     <div style={style}>
       <svg viewBox="0 0 512 512" width={30} height={30}>
-        {
-          svg.map((item) => (
-            <path
-              d={item.d}
-              fill="white"
-              key={`${JSON.stringify(item)}`}
-            />
-          ))
-        }
+        {svg.map((item) => (
+          <path d={item.d} fill="white" key={`${JSON.stringify(item)}`} />
+        ))}
       </svg>
     </div>
   </a>

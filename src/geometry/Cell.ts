@@ -30,7 +30,7 @@ const configurations = [
 
 // Cell class which consists of a number of pre-configured circles
 export default class {
-  circles: Array<Circle>;
+  circles: Circle[];
 
   // Initialise with canvas and dimensions
   constructor(canvas: CanvasRenderingContext2D, width: number, height: number) {
@@ -40,20 +40,20 @@ export default class {
     // Initialise circles from configuration array entries
     this.circles = [];
     configurations.forEach((configuration) => {
-      this.circles.push(new Circle(
-        {
+      this.circles.push(
+        new Circle({
           x,
           y,
           canvas,
           compositionOperation: 'source-over', // default
           ...configuration,
-        },
-      ));
+        })
+      );
     });
   }
 
   // Iterate through configured circles and animate
   animate = (): void => {
     this.circles.forEach((circle) => circle.draw());
-  }
+  };
 }

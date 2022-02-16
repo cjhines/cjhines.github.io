@@ -1,7 +1,8 @@
 import React from 'react';
-import SocialBar from './components/SocialBar';
+
 import Biography from './components/Biography';
 import Canvas from './components/Canvas';
+import SocialBar from './components/SocialBar';
 import './App.scss';
 
 const App: React.FunctionComponent = () => (
