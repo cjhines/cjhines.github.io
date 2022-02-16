@@ -1,8 +1,8 @@
 {
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "airbnb",
-    "plugin:@typescript-eslint/recommended",
+    "universe/web",
+    "plugin:@typescript-eslint/recommended"
   ],
   "settings": {
     "import/resolver": {
@@ -31,7 +31,7 @@
     { "exceptAfterSingleLine": true }
   ]
   },
-  "plugins": [],
+  "plugins": ["prettier"],
   "env": {
     "browser": true,
     "jest": true
