@@ -31,11 +31,10 @@ const Canvas: React.FunctionComponent<Props> = ({ children }: Props) => {
         requestAnimationFrame(animateCell);
       }
     };
-
     requestAnimationFrame(animateCell);
   }
 
-  // Retrieves and saves the canvas parents' dimensions
+  // Retrieves and saves the canvas parents' dimensions.
   const measureSize = () => {
     const { parentElement } = canvasRef.current;
     const newSize = {
@@ -45,7 +44,7 @@ const Canvas: React.FunctionComponent<Props> = ({ children }: Props) => {
     };
     sizeRef.current = newSize;
     setSize(newSize);
-    // Update timestamp reference and start animation
+    // Update timestamp reference and start animation.
     requestAnimationFrame(animate);
   };
 

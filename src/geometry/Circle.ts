@@ -14,7 +14,7 @@ type Arguments = {
   compositionOperation: string;
 };
 
-// Class which represents a given number of 2D points
+// Class which represents a given number of 2D points.
 export default class Circle {
   x: number;
   y: number;
@@ -43,7 +43,7 @@ export default class Circle {
     this.canvas = canvas;
     this.compositionOperation = compositionOperation;
 
-    // Create and store as many point instances as specified
+    // Create and store as many point instances as specified.
     this.points = [];
     for (let i = 0; i < pointCount; i += 1) {
       const angle = ((Math.PI * 2) / pointCount) * i;
@@ -58,19 +58,19 @@ export default class Circle {
     }
   }
 
-  // Draw and fill curves from each point to the next
+  // Draw and fill curves from each point to the next.
   draw(): void {
     this.canvas.globalCompositeOperation = this.compositionOperation;
     this.canvas.fillStyle = this.colour;
     this.canvas.strokeStyle = this.colour;
     this.canvas.beginPath();
 
-    // Move to first control point
+    // Move to first control point.
     let xc = (this.points[0].position.x + this.points[1].position.x) / 2;
     let yc = (this.points[0].position.y + this.points[1].position.y) / 2;
     this.canvas.moveTo(xc, yc);
 
-    // Draw curve to each next point
+    // Draw curve to each next point.
     this.points.forEach((point, index, points) => {
       const nextPoint =
         index === points.length - 1
@@ -82,7 +82,7 @@ export default class Circle {
       this.canvas.quadraticCurveTo(point.position.x, point.position.y, xc, yc);
     });
 
-    // Do first point again to smooth loop
+    // Do first point again to smooth loop.
     xc = (this.points[0].position.x + this.points[1].position.x) / 2;
     yc = (this.points[0].position.y + this.points[1].position.y) / 2;
 
