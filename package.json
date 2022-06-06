@@ -36,9 +36,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.5.1"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
