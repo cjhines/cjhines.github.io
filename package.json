@@ -1,9 +1,7 @@
 {
   "name": "cjhin.es",
   "version": "1.0.0",
-  "private": true,
   "homepage": "https://cjhin.es",
-  "license": "UNLICENSED",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -35,17 +33,5 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.5.1"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }
