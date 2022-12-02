@@ -32,7 +32,7 @@
   align-items: center;
 }
 
-.canvas{
+.canvas {
   z-index: 0;
   background-color: transparent;
   position: absolute;
@@ -45,8 +45,8 @@
 // Reusable
 .border-box {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
   // source: http://css-tricks.com/box-sizing/
 }
 
@@ -70,8 +70,7 @@
   flex-direction: column;
 }
 
-
-// Small screens 
+// Small screens
 @media only screen and (max-width: 700px) {
   .app {
     flex-direction: column-reverse;
@@ -84,7 +83,6 @@
 
 // Large screen
 @media only screen and (min-width: 700px) {
-
   .bioScroller {
     height: 100vh;
     width: 55%;
