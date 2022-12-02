@@ -48,7 +48,7 @@ const Canvas: React.FunctionComponent<Props> = ({ children }: Props) => {
     requestAnimationFrame(animate);
   };
 
-  // 1) Initially measure and save dimenions of parent
+  // 1) Initially measure and save dimensions of parent
   // 2) Setup resize handler
   // 3) Start animation
   useEffect(() => {
