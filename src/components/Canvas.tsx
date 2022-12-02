@@ -14,6 +14,17 @@ const Canvas: React.FunctionComponent<Props> = ({ children }: Props) => {
   const [size, setSize] = useState({ width: 0, height: 0 });
   const sizeRef = useRef(size);
 
+    // 1) Initially measure and save dimensions of parent
+  // 2) Setup resize handler
+  // 3) Start animation
+  useEffect(() => {
+    measureSize();
+    window.addEventListener('resize', measureSize);
+    return () => {
+      window.removeEventListener('resize', measureSize);
+    };
+  }, []);
+
   // Creates a new Cell instance then starts recursive animation
   function animate(timestamp: number) {
     timestampRef.current = timestamp;
@@ -47,17 +58,6 @@ const Canvas: React.FunctionComponent<Props> = ({ children }: Props) => {
     // Update timestamp reference and start animation.
     requestAnimationFrame(animate);
   };
-
-  // 1) Initially measure and save dimensions of parent
-  // 2) Setup resize handler
-  // 3) Start animation
-  useEffect(() => {
-    measureSize();
-    window.addEventListener('resize', measureSize);
-    return () => {
-      window.removeEventListener('resize', measureSize);
-    };
-  }, []);
 
   return (
     <div className="canvasContainer hide-if-small">
