@@ -17,7 +17,7 @@ const style = {
   alignItems: 'center',
 } as React.CSSProperties;
 
-const SocialBar: React.FunctionComponent<Props> = ({
+const SocialIcon: React.FunctionComponent<Props> = ({
   svg,
   url,
   label,
@@ -33,4 +33,4 @@ const SocialBar: React.FunctionComponent<Props> = ({
   </a>
 );
 
-export default SocialBar;
+export default SocialIcon;
