@@ -4,14 +4,6 @@ import CV from '../assets/CV.pdf';
 import hello from '../assets/hello.png';
 import SocialBar from './SocialBar';
 
-const imageStyle = {
-  position: 'relative',
-  width: '20vh',
-  maxWidth: '150px',
-  height: 'auto',
-  marginBottom: '5vh',
-} as React.CSSProperties;
-
 const Biography: React.FunctionComponent = () => (
   <div className="bioScroller">
     <div className="bioContent">
@@ -32,5 +24,13 @@ const Biography: React.FunctionComponent = () => (
     </div>
   </div>
 );
+
+const imageStyle: React.CSSProperties = {
+  position: 'relative',
+  width: '20vh',
+  maxWidth: '150px',
+  height: 'auto',
+  marginBottom: '5vh',
+};
 
 export default Biography;

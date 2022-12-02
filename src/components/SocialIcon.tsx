@@ -6,17 +6,6 @@ type Props = {
   label: string;
 };
 
-const style = {
-  display: 'flex',
-  width: 50,
-  height: 50,
-  margin: 10,
-  backgroundColor: 'black',
-  borderRadius: '100%',
-  justifyContent: 'center',
-  alignItems: 'center',
-} as React.CSSProperties;
-
 const SocialIcon: React.FunctionComponent<Props> = ({
   svg,
   url,
@@ -32,5 +21,16 @@ const SocialIcon: React.FunctionComponent<Props> = ({
     </div>
   </a>
 );
+
+const style: React.CSSProperties = {
+  display: 'flex',
+  width: 50,
+  height: 50,
+  margin: 10,
+  backgroundColor: 'black',
+  borderRadius: '100%',
+  justifyContent: 'center',
+  alignItems: 'center',
+};
 
 export default SocialIcon;
