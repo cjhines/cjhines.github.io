@@ -1,22 +1,29 @@
 import React from 'react';
 
+import sprites from '../assets/sprites.svg';
+
+export enum IconType {
+  EMAIL = 'EMAIL',
+  GITHUB = 'GITHUB',
+  LEAF = 'LEAF',
+  LINKEDIN = 'LINKEDIN',
+}
+
 type Props = {
-  svg: { d: string }[];
+  type: IconType;
   url: string;
   label: string;
 };
 
 const SocialIcon: React.FunctionComponent<Props> = ({
-  svg,
+  type,
   url,
   label,
 }: Props) => (
   <a href={url} aria-label={label} rel="noopener noreferrer" target="_blank">
     <div style={style}>
-      <svg viewBox="0 0 512 512" width={30} height={30}>
-        {svg.map((item) => (
-          <path d={item.d} fill="white" key={`${JSON.stringify(item)}`} />
-        ))}
+      <svg viewBox="0 0 512 512" width={30} height={30} fill="white">
+        <use href={`${sprites}#${type}`} />
       </svg>
     </div>
   </a>
