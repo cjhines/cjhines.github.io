@@ -14,7 +14,7 @@ const Canvas: React.FunctionComponent<Props> = ({ children }: Props) => {
   const [size, setSize] = useState({ width: 0, height: 0 });
   const sizeRef = useRef(size);
 
-    // 1) Initially measure and save dimensions of parent
+  // 1) Initially measure and save dimensions of parent
   // 2) Setup resize handler
   // 3) Start animation
   useEffect(() => {
