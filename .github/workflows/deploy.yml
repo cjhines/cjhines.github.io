@@ -20,6 +20,11 @@ jobs:
           node-version: "lts/*"
           cache: "npm"
 
+      - name: Setup git config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
       - name: Build
         run: |
           npm i
