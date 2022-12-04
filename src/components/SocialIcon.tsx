@@ -15,11 +15,7 @@ type Props = {
   label: string;
 };
 
-const SocialIcon: React.FunctionComponent<Props> = ({
-  type,
-  url,
-  label,
-}: Props) => (
+const SocialIcon: React.FunctionComponent<Props> = ({ type, url, label }) => (
   <a href={url} aria-label={label} rel="noopener noreferrer" target="_blank">
     <div style={style}>
       <svg viewBox="0 0 512 512" width={30} height={30} fill="white">
