@@ -16,7 +16,6 @@ const Canvas: React.FunctionComponent<Props> = ({ children }: Props) => {
 
   // 1) Initially measure and save dimensions of parent
   // 2) Setup resize handler
-  // 3) Start animation
   useEffect(() => {
     measureSize();
     window.addEventListener('resize', measureSize);
@@ -35,7 +34,7 @@ const Canvas: React.FunctionComponent<Props> = ({ children }: Props) => {
       sizeRef.current.height
     );
 
-    // Recursive function. Only loops latest scaled canvas.
+    // Recursive function. Only loops latest scaled canvas
     const animateCell = () => {
       if (timestamp >= timestampRef.current) {
         cell.animate();
@@ -45,7 +44,7 @@ const Canvas: React.FunctionComponent<Props> = ({ children }: Props) => {
     requestAnimationFrame(animateCell);
   }
 
-  // Retrieves and saves the canvas parents' dimensions.
+  // Retrieves and saves the canvas parents' dimensions
   const measureSize = () => {
     const { parentElement } = canvasRef.current;
     const newSize = {
@@ -55,7 +54,7 @@ const Canvas: React.FunctionComponent<Props> = ({ children }: Props) => {
     };
     sizeRef.current = newSize;
     setSize(newSize);
-    // Update timestamp reference and start animation.
+    // Update timestamp reference and start animation
     requestAnimationFrame(animate);
   };
 
