@@ -37,6 +37,9 @@ const Canvas: React.FunctionComponent<Props> = ({ children }: Props) => {
     // Recursive function. Only loops latest scaled canvas
     const animateCell = () => {
       if (timestamp >= timestampRef.current) {
+        // Fill background with solid color
+        context.fillStyle = '#FFC107';
+        context.fillRect(0, 0, sizeRef.current.width, sizeRef.current.height);
         cell.animate();
         requestAnimationFrame(animateCell);
       }
