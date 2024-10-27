@@ -7,7 +7,6 @@ import SocialBar from './SocialBar';
 const Biography: React.FunctionComponent = () => (
   <div className="bioScroller">
     <div className="bioContent">
-      <img src={hello} alt="Oh hey" style={imageStyle} />
       <h1>
         I'm Chris, a Berlin-based software developer that's passionate about
         building unique web and mobile applications.
