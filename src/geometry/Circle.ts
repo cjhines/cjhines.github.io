@@ -11,7 +11,7 @@ type Arguments = {
     max: number;
   };
   canvas: CanvasRenderingContext2D;
-  compositionOperation: string;
+  compositionOperation: GlobalCompositeOperation;
 };
 
 // Class which represents a given number of 2D points.
@@ -23,7 +23,7 @@ export default class Circle {
   pointCount: number;
   range: { min: number; max: number };
   canvas: CanvasRenderingContext2D;
-  compositionOperation: string;
+  compositionOperation: GlobalCompositeOperation;
   position: { x: number; y: number };
   points: Point[];
 
