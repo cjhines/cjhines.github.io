@@ -5,37 +5,37 @@ const configurations = [
   {
     colour: '#008AD2',
     radius: 430,
-    pointCount: 110,
+    pointCount: 90,
     range: { min: 1, max: 10 },
   },
   {
     colour: '#F44336',
     radius: 360,
-    pointCount: 90,
+    pointCount: 70,
     range: { min: 1, max: 10 },
   },
   {
     colour: '#FFC107',
     radius: 290,
-    pointCount: 70,
+    pointCount: 60,
     range: { min: 1, max: 3 },
   },
   {
     colour: '#008AD2',
     radius: 220,
-    pointCount: 50,
+    pointCount: 30,
     range: { min: 1, max: 10 },
   },
   {
     colour: '#F44336',
     radius: 150,
-    pointCount: 30,
+    pointCount: 20,
     range: { min: 1, max: 10 },
   },
   {
     colour: '#FFC107',
     radius: 80,
-    pointCount: 20,
+    pointCount: 10,
     range: { min: 1, max: 3 },
   },
 ];
