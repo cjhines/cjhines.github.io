@@ -35,7 +35,7 @@ const configurations = [
   {
     colour: '#FFC107',
     radius: 80,
-    pointCount: 10,
+    pointCount: 12,
     range: { min: 1, max: 3 },
   },
 ];
