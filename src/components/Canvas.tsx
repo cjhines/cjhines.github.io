@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Cell from '../geometry/Cell';
 import useCanvas from '../hooks/useCanvas';
 import '../App.scss';
+import { addChromaticAberration } from '../utils/effects';
 
 type Props = {
   children: React.ReactNode;
@@ -41,6 +42,12 @@ const Canvas: React.FunctionComponent<Props> = ({ children }: Props) => {
         context.fillStyle = '#FFC107';
         context.fillRect(0, 0, sizeRef.current.width, sizeRef.current.height);
         cell.animate();
+        // Effects
+        addChromaticAberration(context, {
+          width: sizeRef.current.width,
+          height: sizeRef.current.height,
+          offset: 8,
+        });
         requestAnimationFrame(animateCell);
       }
     };
