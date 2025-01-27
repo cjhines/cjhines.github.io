@@ -33,9 +33,10 @@
 }
 
 .canvas {
-  z-index: 0;
-  background-color: transparent;
-  position: absolute;
+  filter: blur(0.8px);
+  background: linear-gradient(to top, #000000, #000000, #333333, #333333);
+  background-size: cover;
+  background-size: 100% 1px;
 }
 
 .socialBar {
@@ -44,9 +45,12 @@
 
 // Reusable
 .border-box {
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box; /* Firefox, other Gecko */
-  box-sizing: border-box; /* Opera/IE 8+ */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
   // source: http://css-tricks.com/box-sizing/
 }
 
