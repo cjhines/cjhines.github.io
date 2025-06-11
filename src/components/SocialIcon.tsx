@@ -18,7 +18,7 @@ type Props = {
 const SocialIcon: React.FunctionComponent<Props> = ({ type, url, label }) => (
   <a href={url} aria-label={label} rel="noopener noreferrer" target="_blank">
     <div style={style}>
-      <svg viewBox="0 0 512 512" width={30} height={30} fill="white">
+      <svg viewBox="0 0 512 512" width={30} height={30} fill="beige">
         <use href={`${sprites}#${type}`} />
       </svg>
     </div>
