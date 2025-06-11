@@ -14,7 +14,7 @@
 }
 
 .bioContent {
-  margin: 5vh 3vw;
+  margin: 0vh 3vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -94,6 +94,11 @@
 
   .hide-if-small {
     display: none;
+  }
+
+  .bioContent {
+    margin: 0vh 5vw;
+    justify-content: center;
   }
 }
 
