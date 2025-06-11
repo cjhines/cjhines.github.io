@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
-    "gh-pages": "^4.0.0",
+    "gh-pages": "^5.0.0",
     "node-sass": "^7.0.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
