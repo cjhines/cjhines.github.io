@@ -13,4 +13,4 @@ const HomeScreen: React.FunctionComponent = () => (
   </>
 );
 
-export default HomeScreen; 
+export default HomeScreen;

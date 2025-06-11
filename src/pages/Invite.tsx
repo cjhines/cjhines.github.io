@@ -6,4 +6,4 @@ const Invite: React.FunctionComponent = () => (
   </div>
 );
 
-export default Invite; 
+export default Invite;

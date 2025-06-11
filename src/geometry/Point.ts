@@ -44,7 +44,10 @@ export default class Point {
     this.duration = randomDuration();
     this.addSpring(this.anchor);
     this.friction = 0.98;
-    this.direction = this.target(window.innerWidth * 0.25,  window.innerHeight / 2)
+    this.direction = this.target(
+      window.innerWidth * 0.25,
+      window.innerHeight / 2
+    );
     this.setSpeed(utils.random(this.range.min, this.range.max));
     this.setAngle(this.direction);
   }
