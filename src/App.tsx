@@ -1,17 +1,19 @@
 import React from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
-import Biography from './components/Biography';
-import Canvas from './components/Canvas';
-import SocialBar from './components/SocialBar';
+import HomeScreen from './pages/Homepage';
+import Invite from './pages/Invite';
 import './App.scss';
 
 const App: React.FunctionComponent = () => (
-  <div className="app">
-    <Biography />
-    <Canvas>
-      <SocialBar className="topLeft" />
-    </Canvas>
-  </div>
+  <HashRouter>
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/invite" element={<Invite />} />
+      </Routes>
+    </div>
+  </HashRouter>
 );
 
 export default App;
