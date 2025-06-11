@@ -1,7 +1,6 @@
 import React from 'react';
 
 import CV from '../assets/CV.pdf';
-import hello from '../assets/hello.png';
 import SocialBar from './SocialBar';
 
 const Biography: React.FunctionComponent = () => (
@@ -25,13 +24,5 @@ const Biography: React.FunctionComponent = () => (
     </div>
   </div>
 );
-
-const imageStyle: React.CSSProperties = {
-  position: 'relative',
-  width: '20vh',
-  maxWidth: '150px',
-  height: 'auto',
-  marginBottom: '5vh',
-};
 
 export default Biography;
