@@ -3,6 +3,7 @@
   width: 100vw;
   min-height: 100vh;
   overflow: hidden;
+  --float-distance: 35px;
 }
 
 .topHalf {
@@ -40,25 +41,25 @@
 
 @keyframes floatOne {
   0% {
-    transform: translateY(50px);
+    transform: translateY(var(--float-distance));
   }
   50% {
-    transform: translateY(-50px);
+    transform: translateY(calc(-1 * var(--float-distance)));
   }
   100% {
-    transform: translateY(50px);
+    transform: translateY(var(--float-distance));
   }
 }
 
 @keyframes floatTwo {
   0% {
-    transform: translateY(-50px);
+    transform: translateY(calc(-1 * var(--float-distance)));
   }
   50% {
-    transform: translateY(50px);
+    transform: translateY(var(--float-distance));
   }
   100% {
-    transform: translateY(-50px);
+    transform: translateY(calc(-1 * var(--float-distance)));
   }
 }
 
