@@ -48,9 +48,11 @@
   0% {
     transform: translateY(var(--float-distance));
   }
+
   50% {
     transform: translateY(calc(-1 * var(--float-distance)));
   }
+
   100% {
     transform: translateY(var(--float-distance));
   }
@@ -60,20 +62,54 @@
   0% {
     transform: translateY(calc(-1 * var(--float-distance)));
   }
+
   50% {
     transform: translateY(var(--float-distance));
   }
+
   100% {
     transform: translateY(calc(-1 * var(--float-distance)));
   }
 }
 
-.towerImage {
-  transform: translateY(-8vw) translateX(6vw);
+
+.headerContainer {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.kaosImage {
   width: 25vw;
+  height: 25vw;
+}
+
+
+.towerImage {
+  transform: translateY(-8vh) translateX(8vw);
+  width: 25vw;
+  aspect-ratio: 417/617;
+}
+
+.centerContainer {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.portrait {
+  width: 40vw;
+  max-width: 400px;
 }
 
 .matatuContainer {
+  display: flex;
+  flex: 1;
+  width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -87,21 +123,4 @@
 .matatuImage2 {
   animation: floatTwo 3s ease-in-out infinite;
   width: 40vw;
-}
-
-.portrait {
-  width: 40vw;
-  max-width: 400px;
-}
-
-.footerContainer {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  width: 100%;
-}
-
-.footerImage {
-  width: 25vw;
-  height: 25vw;
 }
