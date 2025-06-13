@@ -68,6 +68,11 @@
   }
 }
 
+.towerImage {
+  transform: translateY(-8vw) translateX(6vw);
+  width: 25vw;
+}
+
 .matatuContainer {
   flex-direction: row;
   align-items: center;
@@ -96,5 +101,6 @@
 }
 
 .footerImage {
-  width: 20vw;
+  width: 25vw;
+  height: 25vw;
 }
