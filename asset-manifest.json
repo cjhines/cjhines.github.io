@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.76a29050.css",
-    "main.js": "/static/js/main.924ff208.js",
+    "main.css": "/static/css/main.fc5f2e43.css",
+    "main.js": "/static/js/main.9bd592ae.js",
     "static/media/matatu2.png": "/static/media/matatu2.cd4724ae5e21cb469356.png",
-    "static/media/baobub.png": "/static/media/baobub.ee3e4929357728ffecab.png",
     "static/media/portrait.png": "/static/media/portrait.328162e29b0be0c85769.png",
     "static/media/matatu.png": "/static/media/matatu.b15da71302ea7e440ad4.png",
+    "static/media/tower.png": "/static/media/tower.e20bae5c4886df1554b4.png",
     "static/media/CV.pdf": "/static/media/CV.4ab3bac34dfc1a52ba26.pdf",
     "static/media/kaos.png": "/static/media/kaos.f6a6ab594d609c93a3f4.png",
     "static/media/sprites.svg": "/static/media/sprites.ddd50cf65905c7a24f372433be968eaf.svg",
     "index.html": "/index.html",
     "static/media/floralPattern.svg": "/static/media/floralPattern.b36a40c13e112ac767c235d282470566.svg",
     "static/media/wavePattern.svg": "/static/media/wavePattern.720fd4a21fbcb7ceee5e767e875964ce.svg",
-    "main.76a29050.css.map": "/static/css/main.76a29050.css.map",
-    "main.924ff208.js.map": "/static/js/main.924ff208.js.map"
+    "main.fc5f2e43.css.map": "/static/css/main.fc5f2e43.css.map",
+    "main.9bd592ae.js.map": "/static/js/main.9bd592ae.js.map"
   },
   "entrypoints": [
-    "static/css/main.76a29050.css",
-    "static/js/main.924ff208.js"
+    "static/css/main.fc5f2e43.css",
+    "static/js/main.9bd592ae.js"
   ]
 }
