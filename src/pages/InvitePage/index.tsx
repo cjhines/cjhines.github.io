@@ -21,11 +21,11 @@ const Invite: React.FunctionComponent = () => (
     <div className={styles.topHalf} />
     <div className={styles.bottomHalf} />
     <div className={styles.content}>
-      <img src={portrait} alt="portrait" className={styles.portrait} />
       <div className={styles.matatuContainer}>
         <img src={matatu} alt="matatu" className={styles.matatuImage} />
         <img src={matatu2} alt="matatu2" className={styles.matatuImage2} />
       </div>
+      <img src={portrait} alt="portrait" className={styles.portrait} />
       <div className={styles.footerContainer}>
         <img src={kaos} alt="kaos" className={styles.footerImage} />
         <img src={baobub} alt="baobab" className={styles.footerImage} />
