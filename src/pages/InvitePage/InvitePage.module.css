@@ -31,34 +31,50 @@
 
 .content {
   position: relative;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
   display: flex;
+  min-height: 100vh;
+}
+
+@keyframes floatOne {
+  0% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes floatTwo {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+.matatuContainer {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin: 0 5%;
-  min-height: 100vh;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
 }
 
 .matatuImage {
-  animation: float 3s ease-in-out infinite;
+  animation: floatOne 3s ease-in-out infinite;
   width: 40vw;
 }
 
 .matatuImage2 {
-  animation: float 3s ease-in-out infinite;
-  animation-delay: 1.5s;
+  animation: floatTwo 3s ease-in-out infinite;
   width: 40vw;
 } 
