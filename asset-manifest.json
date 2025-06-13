@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f258530.css",
-    "main.js": "/static/js/main.48202833.js",
+    "main.css": "/static/css/main.b5a80cc0.css",
+    "main.js": "/static/js/main.6f9cd315.js",
+    "static/media/matatu2.png": "/static/media/matatu2.cd4724ae5e21cb469356.png",
+    "static/media/matatu.png": "/static/media/matatu.b15da71302ea7e440ad4.png",
     "static/media/CV.pdf": "/static/media/CV.4ab3bac34dfc1a52ba26.pdf",
     "static/media/sprites.svg": "/static/media/sprites.ddd50cf65905c7a24f372433be968eaf.svg",
     "index.html": "/index.html",
-    "main.5f258530.css.map": "/static/css/main.5f258530.css.map",
-    "main.48202833.js.map": "/static/js/main.48202833.js.map"
+    "static/media/floralPattern.svg": "/static/media/floralPattern.b36a40c13e112ac767c235d282470566.svg",
+    "static/media/wavePattern.svg": "/static/media/wavePattern.720fd4a21fbcb7ceee5e767e875964ce.svg",
+    "main.b5a80cc0.css.map": "/static/css/main.b5a80cc0.css.map",
+    "main.6f9cd315.js.map": "/static/js/main.6f9cd315.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f258530.css",
-    "static/js/main.48202833.js"
+    "static/css/main.b5a80cc0.css",
+    "static/js/main.6f9cd315.js"
   ]
 }
