@@ -88,9 +88,9 @@
 
 
 .towerImage {
-  transform: translateY(-8vh) translateX(8vw);
+  transform: translateY(-8vh) translateX(8vh);
   width: 25vw;
-  aspect-ratio: 417/617;
+  height: 36.9904076739vw;
 }
 
 .centerContainer {
