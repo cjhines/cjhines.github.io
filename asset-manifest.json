@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.d2476ad6.css",
+    "main.css": "/static/css/main.14729636.css",
     "main.js": "/static/js/main.232bf6af.js",
     "static/media/matatu2.png": "/static/media/matatu2.cd4724ae5e21cb469356.png",
     "static/media/matatu.png": "/static/media/matatu.b15da71302ea7e440ad4.png",
@@ -9,11 +9,11 @@
     "index.html": "/index.html",
     "static/media/floralPattern.svg": "/static/media/floralPattern.b36a40c13e112ac767c235d282470566.svg",
     "static/media/wavePattern.svg": "/static/media/wavePattern.720fd4a21fbcb7ceee5e767e875964ce.svg",
-    "main.d2476ad6.css.map": "/static/css/main.d2476ad6.css.map",
+    "main.14729636.css.map": "/static/css/main.14729636.css.map",
     "main.232bf6af.js.map": "/static/js/main.232bf6af.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2476ad6.css",
+    "static/css/main.14729636.css",
     "static/js/main.232bf6af.js"
   ]
 }
