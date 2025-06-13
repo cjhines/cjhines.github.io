@@ -33,6 +33,7 @@
 .content {
   position: relative;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   z-index: 1;
   display: flex;
@@ -78,4 +79,8 @@
 .matatuImage2 {
   animation: floatTwo 3s ease-in-out infinite;
   width: 40vw;
-} 
+}
+
+.portrait {
+  width: 40vw;
+}
