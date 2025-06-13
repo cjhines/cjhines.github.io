@@ -4,6 +4,7 @@
   min-height: 100vh;
   overflow: hidden;
   --float-distance: 35px;
+  box-sizing: border-box;
 }
 
 .topHalf {
@@ -32,12 +33,14 @@
 
 .content {
   position: relative;
+  padding: 5%;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
   z-index: 1;
   display: flex;
-  height: 100vh;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 @keyframes floatOne {
@@ -94,5 +97,4 @@
 
 .footerImage {
   width: 20vw;
-  margin: 5%;
 }
