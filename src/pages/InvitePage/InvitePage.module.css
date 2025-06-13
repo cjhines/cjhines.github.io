@@ -91,6 +91,7 @@
 
 .portrait {
   width: 40vw;
+  max-width: 400px;
 }
 
 .footerContainer {
