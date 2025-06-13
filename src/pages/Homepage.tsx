@@ -4,7 +4,7 @@ import Biography from '../components/Biography';
 import Canvas from '../components/Canvas';
 import SocialBar from '../components/SocialBar';
 
-const HomeScreen: React.FunctionComponent = () => (
+const HomePage: React.FunctionComponent = () => (
   <>
     <Biography />
     <Canvas>
@@ -13,4 +13,4 @@ const HomeScreen: React.FunctionComponent = () => (
   </>
 );
 
-export default HomeScreen;
+export default HomePage;
