@@ -10,7 +10,7 @@ const App: React.FunctionComponent = () => (
     <div className="app">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/invite" element={<InvitePage />} />
+        <Route path="/tschuess" element={<InvitePage />} />
       </Routes>
     </div>
   </HashRouter>
