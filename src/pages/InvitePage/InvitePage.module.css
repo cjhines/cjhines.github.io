@@ -32,12 +32,12 @@
 
 .content {
   position: relative;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
   z-index: 1;
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 @keyframes floatOne {
@@ -83,4 +83,16 @@
 
 .portrait {
   width: 40vw;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.footerImage {
+  width: 20vw;
+  margin: 5%;
 }
