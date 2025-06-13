@@ -45,7 +45,7 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
   100% {
     transform: translateY(0px);
@@ -54,5 +54,11 @@
 
 .matatuImage {
   animation: float 3s ease-in-out infinite;
+  width: 40vw;
+}
+
+.matatuImage2 {
+  animation: float 3s ease-in-out infinite;
+  animation-delay: 1.5s;
   width: 40vw;
 } 
