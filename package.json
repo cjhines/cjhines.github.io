@@ -17,7 +17,6 @@
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
     "gh-pages": "^5.0.0",
-    "node-sass": "^7.0.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^7.6.2",
@@ -34,7 +33,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.5.1",
-    "sass": "^1.83.4",
+    "sass": "^1.89.2",
     "typescript": "^3.2.1"
   },
   "browserslist": {
