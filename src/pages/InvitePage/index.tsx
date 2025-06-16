@@ -1,14 +1,13 @@
 import React from 'react';
+
+import styles from './InvitePage.module.css';
 import floralPattern from './assets/floralPattern.svg';
-import wavePattern from './assets/wavePattern.svg';
+import kaos from './assets/kaos.png';
 import matatu from './assets/matatu.png';
 import matatu2 from './assets/matatu2.png';
-import kaos from './assets/kaos.png';
 import portrait from './assets/portrait.png';
 import tower from './assets/tower.png';
-import styles from './InvitePage.module.css';
-
-const floralPatternUrl = `url(${floralPattern})`;
+import wavePattern from './assets/wavePattern.svg';
 
 const Invite: React.FunctionComponent = () => (
   <div
