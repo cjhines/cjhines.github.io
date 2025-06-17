@@ -116,7 +116,7 @@
   height: 20vh;
 }
 
-.towerImage {
+.berlinTowerImage {
   position: absolute;
   right: -10vw;
   top: 20%;
@@ -212,6 +212,7 @@
   transform: translateX(-500vw);
 }
 
+/* Mobile */
 @media screen and (max-width: 768px) {
   .byeImage {
     width: 100vw;
@@ -221,7 +222,7 @@
     width: 80vw;
   }
 
-  .towerImage {
+  .berlinTowerImage {
     right: -5vw;
     top: -2%;
     width: 35vw;
@@ -230,6 +231,7 @@
   }
 }
 
+/* Desktop */
 @media screen and (min-width: 769px) {
   .byeImage {
     width: 30vw;
@@ -240,14 +242,14 @@
   }
 
   .matatuImage {
-    animation: slideLeft 4.5s linear infinite;
+    animation: slideLeft 6s linear infinite;
   }
 
   .matatuImage2 {
-    animation: slideRight 5.5s linear infinite;
+    animation: slideRight 7s linear infinite;
   }
 
   .ubahnImage {
-    animation: slideRightFar 12s linear infinite;
+    animation: slideRightFar 20s linear infinite;
   }
 }

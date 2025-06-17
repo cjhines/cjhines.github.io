@@ -6,12 +6,11 @@ import modalStyles from './components/Modal/Modal.module.css';
 import bye from './assets/bye.png';
 import floralPattern from './assets/floralPattern.svg';
 import jambo from './assets/jambo.png';
-import kaos from './assets/kaos.png';
 import matatu from './assets/matatu.png';
 import matatu2 from './assets/matatu2.png';
 import portrait1 from './assets/portrait1.png';
 import portrait2 from './assets/portrait2.png';
-import tower from './assets/tower.png';
+import berlinTower from './assets/berlinTower.png';
 import wavePattern from './assets/wavePattern.svg';
 import ubahn from './assets/ubahn.png';
 
@@ -32,7 +31,11 @@ const Invite: React.FunctionComponent = () => {
         <img src={ubahn} alt="ubahn" className={styles.ubahnImage} />
       </div>
 
-      <img src={tower} alt="tower" className={styles.towerImage} />
+      <img
+        src={berlinTower}
+        alt="berlinTower"
+        className={styles.berlinTowerImage}
+      />
       <div className={styles.content}>
         <div className={styles.centerContainer}>
           <img src={bye} alt="bye" className={styles.byeImage} />
