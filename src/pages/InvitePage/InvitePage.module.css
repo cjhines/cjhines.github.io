@@ -202,7 +202,7 @@
 
 .ubahnImage {
   animation: slideRightFar 10s linear infinite;
-  animation-delay: 8s;
+  animation-delay: 6s;
   width: 175vw;
   transform: translateX(-500vw);
 }
