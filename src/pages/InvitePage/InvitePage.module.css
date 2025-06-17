@@ -132,6 +132,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .portraitContainer {
@@ -228,5 +229,17 @@
 
   .portraitContainer {
     width: 20vw;
+  }
+
+  .matatuImage {
+    animation: slideLeft 4.5s linear infinite;
+  }
+
+  .matatuImage2 {
+    animation: slideRight 5.5s linear infinite;
+  }
+
+  .ubahnImage {
+    animation: slideRightFar 12s linear infinite;
   }
 }
