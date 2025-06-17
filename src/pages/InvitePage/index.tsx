@@ -11,6 +11,7 @@ import matatu2 from './assets/matatu2.png';
 import portrait1 from './assets/portrait1.png';
 import portrait2 from './assets/portrait2.png';
 import berlinTower from './assets/berlinTower.png';
+import nairobiTower from './assets/nairobiTower.png';
 import wavePattern from './assets/wavePattern.svg';
 import ubahn from './assets/ubahn.png';
 
@@ -35,6 +36,11 @@ const Invite: React.FunctionComponent = () => {
         src={berlinTower}
         alt="berlinTower"
         className={styles.berlinTowerImage}
+      />
+      <img
+        src={nairobiTower}
+        alt="nairobiTower"
+        className={styles.nairobiTowerImage}
       />
       <div className={styles.content}>
         <div className={styles.centerContainer}>

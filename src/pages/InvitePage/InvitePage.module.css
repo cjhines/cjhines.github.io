@@ -123,7 +123,17 @@
   transform: translateY(-50%) rotate(-10deg);
   width: 25vw;
   height: 36.9904076739vw;
-  z-index: 5;
+  z-index: 1;
+}
+
+.nairobiTowerImage {
+  position: absolute;
+  left: -7vw;
+  bottom: 20%;
+  transform: translateY(50%) rotate(20deg);
+  width: 25vw;
+  height: 36.9904076739vw;
+  z-index: 1;
 }
 
 .centerContainer {
@@ -228,6 +238,14 @@
     width: 35vw;
     height: auto;
     transform: rotate(-15deg);
+  }
+
+  .nairobiTowerImage {
+    right: -5vw;
+    bottom: -2%;
+    width: 40vw;
+    height: auto;
+    transform: rotate(15deg);
   }
 }
 
