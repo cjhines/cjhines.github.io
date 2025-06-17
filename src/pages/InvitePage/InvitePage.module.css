@@ -73,6 +73,23 @@
   }
 }
 
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
 
 .headerContainer {
   position: absolute;
@@ -136,28 +153,31 @@
 
 .matatuContainer {
   position: absolute;
-  bottom: 0;
+  bottom: 5vh;
   display: flex;
-  z-index: -1;
-  flex: 1;
+  z-index: 1;
   width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .matatuImage {
-  animation: floatOne 3s ease-in-out infinite;
+  animation: slideLeft 2.5s linear infinite;
+  animation-delay: 6s;
   width: 40vw;
   max-width: 300px;
+  transform: translateX(100vw);
 }
 
 .matatuImage2 {
-  animation: floatTwo 3s ease-in-out infinite;
+  animation: slideRight 3.5s linear infinite;
+  animation-delay: 3s;
   width: 40vw;
   max-width: 300px;
+  transform: translateX(-100vw);
 }
-
 
 @media screen and (max-width: 768px) {
   .byeImage {
