@@ -91,6 +91,15 @@
   }
 }
 
+@keyframes slideRightFar {
+  0% {
+    transform: translateX(-300vw);
+  }
+  100% {
+    transform: translateX(2000vw);
+  }
+}
+
 .headerContainer {
   position: absolute;
   display: flex;
@@ -177,6 +186,25 @@
   width: 40vw;
   max-width: 300px;
   transform: translateX(-100vw);
+}
+
+.ubahnContainer {
+  position: absolute;
+  top: 10vh;
+  display: flex;
+  z-index: 1;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.ubahnImage {
+  animation: slideRightFar 10s linear infinite;
+  animation-delay: 8s;
+  width: 175vw;
+  transform: translateX(-500vw);
 }
 
 @media screen and (max-width: 768px) {

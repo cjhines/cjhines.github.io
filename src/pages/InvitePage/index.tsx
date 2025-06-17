@@ -13,6 +13,7 @@ import portrait1 from './assets/portrait1.png';
 import portrait2 from './assets/portrait2.png';
 import tower from './assets/tower.png';
 import wavePattern from './assets/wavePattern.svg';
+import ubahn from './assets/ubahn.png';
 
 const Invite: React.FunctionComponent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,11 +28,15 @@ const Invite: React.FunctionComponent = () => {
     >
       <div className={styles.topHalf} />
       <div className={styles.bottomHalf} />
+      <div className={styles.ubahnContainer}>
+        <img src={ubahn} alt="ubahn" className={styles.ubahnImage} />
+      </div>
+
+      <div className={styles.headerContainer}>
+        <img src={kaos} alt="kaos" className={styles.kaosImage} />
+        <img src={tower} alt="tower" className={styles.towerImage} />
+      </div>
       <div className={styles.content}>
-        <div className={styles.headerContainer}>
-          <img src={kaos} alt="kaos" className={styles.kaosImage} />
-          <img src={tower} alt="tower" className={styles.towerImage} />
-        </div>
         <div className={styles.centerContainer}>
           <img src={bye} alt="bye" className={styles.byeImage} />
 
