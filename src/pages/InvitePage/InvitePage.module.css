@@ -85,6 +85,7 @@
 
 .kaosImage {
   transform: translateY(18vh) translateX(18vw);
+  opacity: 0;
   width: 20vh;
   height: 20vh;
 }
@@ -103,6 +104,10 @@
   align-items: center;
 }
 
+.byeImage {
+  max-width: 300px;
+}
+
 .portraitContainer {
   position: relative;
   width: 20vw;
@@ -110,6 +115,7 @@
   height: 15vw;
   max-height: 300px;
   aspect-ratio: 800/600;
+  cursor: pointer;
 }
 
 .portrait {

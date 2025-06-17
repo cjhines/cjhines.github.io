@@ -1,7 +1,9 @@
 import React from 'react';
 
 import styles from './InvitePage.module.css';
+import bye from './assets/bye.png';
 import floralPattern from './assets/floralPattern.svg';
+import jambo from './assets/jambo.png';
 import kaos from './assets/kaos.png';
 import matatu from './assets/matatu.png';
 import matatu2 from './assets/matatu2.png';
@@ -26,6 +28,8 @@ const Invite: React.FunctionComponent = () => (
         <img src={tower} alt="tower" className={styles.towerImage} />
       </div>
       <div className={styles.centerContainer}>
+        <img src={bye} alt="bye" className={styles.byeImage} />
+
         <div className={styles.portraitContainer}>
           <img src={portrait1} alt="portrait1" className={styles.portrait} />
           <img
@@ -34,6 +38,7 @@ const Invite: React.FunctionComponent = () => (
             className={styles.portraitHover}
           />
         </div>
+        <img src={jambo} alt="jambo" className={styles.byeImage} />
       </div>
       <div className={styles.matatuContainer}>
         <img src={matatu} alt="matatu" className={styles.matatuImage} />
