@@ -32,8 +32,7 @@ const Invite: React.FunctionComponent = () => {
         <img src={ubahn} alt="ubahn" className={styles.ubahnImage} />
       </div>
 
-      <div className={styles.headerContainer}>
-        <img src={kaos} alt="kaos" className={styles.kaosImage} />
+      <div className={styles.towerContainer}>
         <img src={tower} alt="tower" className={styles.towerImage} />
       </div>
       <div className={styles.content}>

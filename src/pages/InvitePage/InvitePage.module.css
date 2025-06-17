@@ -100,7 +100,7 @@
   }
 }
 
-.headerContainer {
+.towerContainer {
   position: absolute;
   display: flex;
   flex: 1;
@@ -117,9 +117,13 @@
 }
 
 .towerImage {
-  transform: translateY(-8vh) translateX(8vw);
+  position: absolute;
+  right: -10vw;
+  top: 50%;
+  transform: translateY(-50%) rotate(-15deg);
   width: 25vw;
   height: 36.9904076739vw;
+  z-index: 5;
 }
 
 .centerContainer {
