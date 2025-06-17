@@ -174,7 +174,7 @@
 
 .matatuImage {
   animation: slideLeft 2.5s linear infinite;
-  animation-delay: 6s;
+  animation-delay: 4s;
   width: 40vw;
   max-width: 300px;
   transform: translateX(100vw);
@@ -182,7 +182,7 @@
 
 .matatuImage2 {
   animation: slideRight 3.5s linear infinite;
-  animation-delay: 3s;
+  animation-delay: 2s;
   width: 40vw;
   max-width: 300px;
   transform: translateX(-100vw);
