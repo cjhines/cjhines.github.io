@@ -104,16 +104,8 @@
   align-items: center;
 }
 
-.byeImage {
-  max-width: 300px;
-}
-
 .portraitContainer {
   position: relative;
-  width: 20vw;
-  max-width: 400px;
-  height: 15vw;
-  max-height: 300px;
   aspect-ratio: 800/600;
   cursor: pointer;
 }
@@ -146,6 +138,7 @@
   position: absolute;
   bottom: 0;
   display: flex;
+  z-index: -1;
   flex: 1;
   width: 100%;
   flex-direction: row;
@@ -163,4 +156,25 @@
   animation: floatTwo 3s ease-in-out infinite;
   width: 40vw;
   max-width: 300px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .byeImage {
+    width: 100vw;
+  }
+
+  .portraitContainer {
+    width: 80vw;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .byeImage {
+    width: 30vw;
+  }
+
+  .portraitContainer {
+    width: 20vw;
+  }
 }
