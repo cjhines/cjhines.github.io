@@ -24,7 +24,7 @@ const Invite: React.FunctionComponent = () => {
   const [hasError, setHasError] = useState(false);
 
   const sendRSVP = () => {
-    fetch('https://cjhin.es/api/rsvp', {
+    fetch('/api/rsvp', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
