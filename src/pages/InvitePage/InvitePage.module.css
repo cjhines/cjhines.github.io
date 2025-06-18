@@ -216,7 +216,7 @@
 }
 
 .ubahnImage {
-  animation: slideRightFar 10s linear infinite;
+  animation: slideRightFar 12s linear infinite;
   animation-delay: 6s;
   width: 175vw;
   transform: translateX(-500vw);
@@ -241,9 +241,9 @@
   }
 
   .nairobiTowerImage {
-    right: -5vw;
-    bottom: -2%;
-    width: 40vw;
+    right: -3vw;
+    bottom: -1%;
+    width: 45vw;
     height: auto;
     transform: rotate(15deg);
   }
