@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3214e7b2.css",
-    "main.js": "/static/js/main.a9754c13.js",
+    "main.css": "/static/css/main.3d930c52.css",
+    "main.js": "/static/js/main.c197dc0e.js",
     "static/media/matatu.png": "/static/media/matatu.a2a31e4f6b9eb7072f7b.png",
     "static/media/nairobiTower.png": "/static/media/nairobiTower.af24dbacaa53476c4bbc.png",
     "static/media/ubahn.png": "/static/media/ubahn.b1fafce933b81267072d.png",
@@ -16,11 +16,11 @@
     "index.html": "/index.html",
     "static/media/floralPattern.svg": "/static/media/floralPattern.b36a40c13e112ac767c235d282470566.svg",
     "static/media/wavePattern.svg": "/static/media/wavePattern.720fd4a21fbcb7ceee5e767e875964ce.svg",
-    "main.3214e7b2.css.map": "/static/css/main.3214e7b2.css.map",
-    "main.a9754c13.js.map": "/static/js/main.a9754c13.js.map"
+    "main.3d930c52.css.map": "/static/css/main.3d930c52.css.map",
+    "main.c197dc0e.js.map": "/static/js/main.c197dc0e.js.map"
   },
   "entrypoints": [
-    "static/css/main.3214e7b2.css",
-    "static/js/main.a9754c13.js"
+    "static/css/main.3d930c52.css",
+    "static/js/main.c197dc0e.js"
   ]
 }
