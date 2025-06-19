@@ -405,6 +405,8 @@
     padding-bottom: 3rem;
     justify-content: flex-start;
     border-top: 9px dotted black;
+    border-bottom: 9px dotted black;
+    margin-bottom: 1.2rem;
   }
 
   .title {
