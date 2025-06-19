@@ -18,19 +18,18 @@ import ubahn from './assets/ubahn.png';
 const Invite: React.FunctionComponent = () => {
   const [name, setName] = useState('');
   const [guestCount, setGuestCount] = useState(0);
-  const [isAttending, setIsAttending] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [didSubmit, setDidSubmit] = useState(false);
   const [hasError, setHasError] = useState(false);
 
-  const sendRSVP = () => {
+  const sendRSVP = (attending: boolean) => {
     fetch('/api/rsvp', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         name,
         guests: guestCount,
-        attending: isAttending,
+        attending,
       }),
     })
       .then((res) => res.json())
@@ -46,12 +45,10 @@ const Invite: React.FunctionComponent = () => {
 
   const getGuestCountLabel = (num: number) => {
     switch (num) {
+      case 0:
+        return 'Just invitees';
       case 1:
-        return 'Plus one';
-      case 2:
-        return 'Plus two';
-      default:
-        return 'Just me';
+        return 'With a friend';
     }
   };
 
@@ -103,61 +100,49 @@ const Invite: React.FunctionComponent = () => {
       </div>
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <div className={modalStyles.modalContainer}>
-          <h1>You're</h1>
-          <div className={styles.rsvpForm}>
-            <h2 className={styles.rsvpTitle}>RSVP</h2>
+        <div className={styles.modalContainer}>
+          <div className={styles.detailsSection}>
+            <h1>INVITE</h1>
+          </div>
+          <div className={styles.rsvpSection}>
+            <h2 className={styles.rsvpTitle}>Let us know you're coming!</h2>
             <div className={styles.formGroup}>
-              <label htmlFor="name" className={styles.label}>
-                Name
-              </label>
               <input
                 type="text"
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className={styles.input}
-                placeholder="Enter your name"
+                placeholder="Name / Names"
               />
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="guests" className={styles.label}>
-                Number of Guests
-              </label>
               <select
                 id="guests"
                 value={guestCount}
                 onChange={(e) => setGuestCount(Number(e.target.value))}
                 className={styles.select}
               >
-                {[0, 1, 2].map((num) => (
+                {[0, 1].map((num) => (
                   <option key={num} value={num}>
                     {getGuestCountLabel(num)}
                   </option>
                 ))}
               </select>
             </div>
-            <div className={styles.formGroup}>
-              <label className={styles.label}>Attending:</label>
-              <div className={styles.switchContainer}>
-                <input
-                  type="checkbox"
-                  id="attending"
-                  checked={isAttending}
-                  onChange={(e) => setIsAttending(e.target.checked)}
-                  className={styles.switch}
-                />
-                <label htmlFor="attending" className={styles.switchLabel}>
-                  {isAttending ? 'Yes' : 'No'}
-                </label>
-              </div>
-            </div>
             <button
-              onClick={sendRSVP}
+              onClick={() => sendRSVP(true)}
               className={styles.sendButton}
               disabled={!name.trim()}
             >
-              Send RSVP
+              See you there 🎉
+            </button>
+            <button
+              onClick={() => sendRSVP(false)}
+              className={styles.sendButton}
+              disabled={!name.trim()}
+            >
+              Can't make it 😔
             </button>
           </div>
         </div>
