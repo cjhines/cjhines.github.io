@@ -163,7 +163,7 @@ const Invite: React.FunctionComponent = () => {
         <h3 className={styles.arrows}>⇩ ⇩ ⇩ ⇩</h3>
       </div>
       <div className={styles.rsvpSection}>
-        <h2 className={styles.title}>Let us know you're coming</h2>
+        <h2 className={styles.title}>Please RSVP</h2>
         <div className={styles.formGroup}>
           <input
             type="text"
