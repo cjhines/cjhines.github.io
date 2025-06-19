@@ -145,7 +145,7 @@ const Invite: React.FunctionComponent = () => {
           Kids are welcome. There is a kids play area, but be aware that the
           venue is rather near the Spree
         </h4>
-        <h3 className={styles.arrows}>⇩ ⇩ ⇩ ⇩</h3>
+        <h3 className={styles.arrows}>🢃 🢃 🢃 🢃</h3>
       </div>
       <div className={styles.rsvpSection}>
         <h2 className={styles.title}>Let us know you're coming</h2>
