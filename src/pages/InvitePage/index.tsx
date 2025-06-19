@@ -106,13 +106,22 @@ const Invite: React.FunctionComponent = () => {
             <h4 className={styles.body}>
               KAOS Berlin, Schöneweide
               <br />
-              S-Bahn / Tram (
+              S-Bahn / Tram
+              <br />(
               <a
                 href="https://g.co/kgs/WZ5gMvw"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Directions
+              </a>
+              ) (
+              <a
+                href="https://g.co/kgs/WZ5gMvw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Map
               </a>
               )
             </h4>
@@ -141,6 +150,12 @@ const Invite: React.FunctionComponent = () => {
             <h4 className={styles.body}>
               We're organising a nice buffet, but your cakes / salads / finger
               food will be met with eager, hungry faces
+            </h4>
+            <br />
+            <h3 className={styles.subtitle}>Kids</h3>
+            <h4 className={styles.body}>
+              Kids are welcome. There is a kids play area, but be aware that the
+              venue is very near the Spree
             </h4>
             <h3 className={styles.arrows}>⇩ ⇩ ⇩ ⇩</h3>
           </div>
