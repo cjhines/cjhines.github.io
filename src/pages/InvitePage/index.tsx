@@ -23,34 +23,152 @@ const Invite: React.FunctionComponent = () => {
   const [hasError, setHasError] = useState(false);
 
   const sendRSVP = (attending: boolean) => {
-    fetch('/api/rsvp', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name,
-        guests: 1,
-        attending,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success) {
-          console.log('Success!');
-          setDidSubmit(true);
-        } else {
-          setHasError(true);
-        }
-      });
-  };
-
-  const getGuestCountLabel = (num: number) => {
-    switch (num) {
-      case 0:
-        return 'Just invitees';
-      case 1:
-        return 'With a friend';
+    try {
+      fetch('/api/rsvp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          guests: 1,
+          attending,
+        }),
+      })
+        .then((res) => {
+          console.log(res);
+          if (!res.ok || res.status !== 200) {
+            setHasError(true);
+            return;
+          }
+          return res.json();
+        })
+        .then((data) => {
+          console.log(data);
+          if (data.success) {
+            console.log('Success!');
+            setDidSubmit(true);
+          } else {
+            setHasError(true);
+          }
+        });
+    } catch (error) {
+      setHasError(true);
     }
   };
+
+  const renderErrorContent = () => (
+    <>
+      <div className={styles.detailsSection}>
+        <h3 className={styles.subtitle}>
+          Something went wrong
+          <br />
+          <br />
+          Try again later or with a different network connection
+        </h3>
+      </div>
+    </>
+  );
+
+  const renderSubmittedContent = () => (
+    <>
+      <div className={styles.detailsSection}>
+        <h3 className={styles.subtitle}>
+          Looking forward to celebrating with you!
+        </h3>
+      </div>
+    </>
+  );
+
+  const renderInitialContent = () => (
+    <>
+      <div className={styles.detailsSection}>
+        <h3 className={styles.subtitle}>Where</h3>
+        <h4 className={styles.body}>
+          KAOS Berlin, Schöneweide
+          <br />
+          S-Bahn / Tram
+          <br />(
+          <a
+            href="https://g.co/kgs/WZ5gMvw"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Directions
+          </a>
+          ) (
+          <a
+            href="https://g.co/kgs/WZ5gMvw"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Map
+          </a>
+          )
+        </h4>
+        <br />
+        <h3 className={styles.subtitle}>When</h3>
+        <h4 className={styles.body}>Saturday, July 12th</h4>
+        <h4 className={styles.body}>15:00-22:00</h4>
+        <br />
+        <h3 className={styles.subtitle}>Gifts</h3>
+        <h4 className={styles.body}>
+          We're moving 6200 kilometers, please no gifts 😅
+          <br />
+          <br />
+          Contributions to expenses and furnishing from scratch are hugely
+          appreciated.
+          <br />
+          (Link)
+          <br />
+        </h4>
+        <br />
+        <h3 className={styles.subtitle}>Alcohol</h3>
+        <h4 className={styles.body}>
+          There is a staffed bar. We're putting enough cash back there for a few
+          rounds each
+        </h4>
+        <br />
+        <h3 className={styles.subtitle}>Food</h3>
+        <h4 className={styles.body}>
+          We're organising a nice buffet, but your cakes / salads / finger food
+          will be met with eager, hungry faces
+        </h4>
+        <br />
+        <h3 className={styles.subtitle}>Kids</h3>
+        <h4 className={styles.body}>
+          Kids are welcome. There is a kids play area, but be aware that the
+          venue is rather near the Spree
+        </h4>
+        <h3 className={styles.arrows}>⇩ ⇩ ⇩ ⇩</h3>
+      </div>
+      <div className={styles.rsvpSection}>
+        <h2 className={styles.title}>Let us know you're coming</h2>
+        <div className={styles.formGroup}>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className={styles.input}
+            placeholder="Name / Names"
+          />
+        </div>
+        <button
+          onClick={() => sendRSVP(true)}
+          className={styles.sendButton}
+          disabled={!name.trim()}
+        >
+          See you there 🎉
+        </button>
+        <button
+          onClick={() => sendRSVP(false)}
+          className={styles.sendButton}
+          disabled={!name.trim()}
+        >
+          Can't make it 😔
+        </button>
+      </div>
+    </>
+  );
 
   return (
     <div
@@ -101,91 +219,9 @@ const Invite: React.FunctionComponent = () => {
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <div className={styles.modalContainer}>
-          <div className={styles.detailsSection}>
-            <h3 className={styles.subtitle}>Where</h3>
-            <h4 className={styles.body}>
-              KAOS Berlin, Schöneweide
-              <br />
-              S-Bahn / Tram
-              <br />(
-              <a
-                href="https://g.co/kgs/WZ5gMvw"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Directions
-              </a>
-              ) (
-              <a
-                href="https://g.co/kgs/WZ5gMvw"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Map
-              </a>
-              )
-            </h4>
-            <br />
-            <h3 className={styles.subtitle}>When</h3>
-            <h4 className={styles.body}>Saturday, July 12th</h4>
-            <h4 className={styles.body}>15:00-22:00</h4>
-            <br />
-            <h3 className={styles.subtitle}>Gifts</h3>
-            <h4 className={styles.body}>
-              We're moving more than 6200 kilometers, please no gifts 😅
-              <br />
-              <br />
-              Contributions to expenses and furnishing our house are hugely
-              appreciated: link
-              <br />
-            </h4>
-            <br />
-            <h3 className={styles.subtitle}>Alcohol</h3>
-            <h4 className={styles.body}>
-              There is a staffed bar. We're putting enough cash back there for a
-              few rounds each
-            </h4>
-            <br />
-            <h3 className={styles.subtitle}>Food</h3>
-            <h4 className={styles.body}>
-              We're organising a nice buffet, but your cakes / salads / finger
-              food will be met with eager, hungry faces
-            </h4>
-            <br />
-            <h3 className={styles.subtitle}>Kids</h3>
-            <h4 className={styles.body}>
-              Kids are welcome. There is a kids play area, but be aware that the
-              venue is rather near the Spree
-            </h4>
-            <h3 className={styles.arrows}>⇩ ⇩ ⇩ ⇩</h3>
-          </div>
-          <div className={styles.rsvpSection}>
-            <h2 className={styles.title}>Let us know you're coming</h2>
-            <div className={styles.formGroup}>
-              <input
-                type="text"
-                id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className={styles.input}
-                placeholder="Name / Names"
-              />
-            </div>
-            <button
-              onClick={() => sendRSVP(true)}
-              className={styles.sendButton}
-              disabled={!name.trim()}
-            >
-              See you there 🎉
-            </button>
-            <button
-              onClick={() => sendRSVP(false)}
-              className={styles.sendButton}
-              disabled={!name.trim()}
-            >
-              Can't make it 😔
-            </button>
-          </div>
+          {!didSubmit && !hasError && renderInitialContent()}
+          {didSubmit && renderSubmittedContent()}
+          {hasError && renderErrorContent()}
         </div>
       </Modal>
     </div>

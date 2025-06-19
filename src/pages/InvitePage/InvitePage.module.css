@@ -227,8 +227,13 @@
 
 .modalContainer {
   display: flex;
+  overflow-y: scroll;
   width: 100%;
   height: 100%;
+}
+
+.formGroup {
+  margin-top: -20px;
 }
 
 .title {
@@ -335,7 +340,6 @@
 @media screen and (orientation: portrait) {
   .modalContainer {
     flex-direction: column;
-    overflow-y: scroll;
     scrollbar-gutter: stable;
     scrollbar-width: thick;
     scrollbar-color: black #ffffff56;
@@ -385,7 +389,6 @@
 
   .rsvpSection {
     justify-content: flex-start;
-    border-left: 10px dotted black;
   }
 
   .arrows {
