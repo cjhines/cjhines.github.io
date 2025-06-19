@@ -268,6 +268,15 @@
   font-weight: 500;
 }
 
+.submittedContainer {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
 .detailsSection {
   display: flex;
   flex-direction: column;

@@ -17,9 +17,8 @@ import ubahn from './assets/ubahn.png';
 
 const Invite: React.FunctionComponent = () => {
   const [name, setName] = useState('');
-  const [guestCount, setGuestCount] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [didSubmit, setDidSubmit] = useState(false);
+  const [response, setResponse] = useState(null);
   const [hasError, setHasError] = useState(false);
 
   const sendRSVP = (attending: boolean) => {
@@ -45,7 +44,7 @@ const Invite: React.FunctionComponent = () => {
           console.log(data);
           if (data.success) {
             console.log('Success!');
-            setDidSubmit(true);
+            setResponse(attending);
           } else {
             setHasError(true);
           }
@@ -57,7 +56,7 @@ const Invite: React.FunctionComponent = () => {
 
   const renderErrorContent = () => (
     <>
-      <div className={styles.detailsSection}>
+      <div className={styles.submittedContainer}>
         <h3 className={styles.subtitle}>
           Something went wrong
           <br />
@@ -70,13 +69,21 @@ const Invite: React.FunctionComponent = () => {
 
   const renderSubmittedContent = () => (
     <>
-      <div className={styles.detailsSection}>
+      <div className={styles.submittedContainer}>
         <h3 className={styles.subtitle}>
-          Looking forward to celebrating with you!
+          {response
+            ? 'Looking forward to celebrating with you!'
+            : 'Hope to see you there!'}
         </h3>
       </div>
     </>
   );
+
+  const onCloseModal = () => {
+    setIsModalOpen(false);
+    setResponse(null);
+    setHasError(false);
+  };
 
   const renderInitialContent = () => (
     <>
@@ -217,10 +224,10 @@ const Invite: React.FunctionComponent = () => {
         </div>
       </div>
 
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+      <Modal isOpen={isModalOpen} onClose={onCloseModal}>
         <div className={styles.modalContainer}>
-          {!didSubmit && !hasError && renderInitialContent()}
-          {didSubmit && renderSubmittedContent()}
+          {response === null && !hasError && renderInitialContent()}
+          {response !== null && renderSubmittedContent()}
           {hasError && renderErrorContent()}
         </div>
       </Modal>
