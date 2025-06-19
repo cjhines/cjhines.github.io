@@ -28,7 +28,7 @@ const Invite: React.FunctionComponent = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         name,
-        guests: guestCount,
+        guests: 1,
         attending,
       }),
     })
@@ -155,7 +155,7 @@ const Invite: React.FunctionComponent = () => {
             <h3 className={styles.subtitle}>Kids</h3>
             <h4 className={styles.body}>
               Kids are welcome. There is a kids play area, but be aware that the
-              venue is very near the Spree
+              venue is rather near the Spree
             </h4>
             <h3 className={styles.arrows}>⇩ ⇩ ⇩ ⇩</h3>
           </div>
@@ -170,20 +170,6 @@ const Invite: React.FunctionComponent = () => {
                 className={styles.input}
                 placeholder="Name / Names"
               />
-            </div>
-            <div className={styles.formGroup}>
-              <select
-                id="guests"
-                value={guestCount}
-                onChange={(e) => setGuestCount(Number(e.target.value))}
-                className={styles.select}
-              >
-                {[0, 1].map((num) => (
-                  <option key={num} value={num}>
-                    {getGuestCountLabel(num)}
-                  </option>
-                ))}
-              </select>
             </div>
             <button
               onClick={() => sendRSVP(true)}
