@@ -114,8 +114,8 @@ const Invite: React.FunctionComponent = () => {
           We're moving 6200 kilometers, please no gifts 😅
           <br />
           <br />
-          Contributions to expenses and furnishing from scratch are hugely
-          appreciated.
+          Contributions to expenses and furnishing from scratch are very
+          appreciated
           <br />
           (Link)
           <br />

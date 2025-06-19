@@ -374,6 +374,18 @@
     justify-content: flex-start;
     border-top: 9px dotted black;
   }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+  }
+  
+  .body {
+    font-size: 1.2rem;
+  }
 }
 
 /* Landscape (width > height) */
