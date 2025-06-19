@@ -102,10 +102,50 @@ const Invite: React.FunctionComponent = () => {
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <div className={styles.modalContainer}>
           <div className={styles.detailsSection}>
-            <h1>INVITE</h1>
+            <h3 className={styles.subtitle}>Where</h3>
+            <h4 className={styles.body}>
+              KAOS Berlin, Schöneweide
+              <br />
+              S-Bahn / Tram (
+              <a
+                href="https://g.co/kgs/WZ5gMvw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Directions
+              </a>
+              )
+            </h4>
+            <br />
+            <h3 className={styles.subtitle}>When</h3>
+            <h4 className={styles.body}>Saturday, July 12th</h4>
+            <h4 className={styles.body}>15:00-22:00</h4>
+            <br />
+            <h3 className={styles.subtitle}>Gifts</h3>
+            <h4 className={styles.body}>
+              We're moving more than 6200 kilometers, please no gifts 😅
+              <br />
+              <br />
+              Contributions to expenses and furnishing our house are hugely
+              appreciated: link
+              <br />
+            </h4>
+            <br />
+            <h3 className={styles.subtitle}>Alcohol</h3>
+            <h4 className={styles.body}>
+              There is a staffed bar. We're putting enough cash back there for a
+              few rounds each
+            </h4>
+            <br />
+            <h3 className={styles.subtitle}>Food</h3>
+            <h4 className={styles.body}>
+              We're organising a nice buffet, but your cakes / salads / finger
+              food will be met with eager, hungry faces
+            </h4>
+            <h3 className={styles.arrows}>⇩ ⇩ ⇩ ⇩</h3>
           </div>
           <div className={styles.rsvpSection}>
-            <h2 className={styles.rsvpTitle}>Let us know you're coming!</h2>
+            <h2 className={styles.title}>Let us know you're coming</h2>
             <div className={styles.formGroup}>
               <input
                 type="text"

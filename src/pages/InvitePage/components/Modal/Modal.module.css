@@ -30,22 +30,27 @@
   font-size: 24px;
   cursor: pointer;
   padding: 5px;
-  color: black;
   transition: color 0.2s;
 }
 
 .closeButton:hover {
-  color: #666;
+  color: black;
 }
+
 
 @media screen and (max-width: 768px) {
   .closeButton {
-    font-size: 24px;
+    font-size: 48px;
+    color: white;
+    left: 0;
+    right: 0;
+    top: -10%;
   }
 }
 
 @media screen and (min-width: 769px) {
   .closeButton {
     font-size: 48px;
+    color: black;
   }
 }
