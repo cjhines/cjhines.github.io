@@ -200,76 +200,71 @@ const Invite: React.FunctionComponent = () => {
         ['--wave-pattern' as string]: `url(${wavePattern})`,
       }}
     >
-      {isLoading ? (
+      {isLoading && (
         <div
           className={`${styles.loadingScreen}
           ${isFadingOut ? styles.fadeOut : ''}`}
         >
           <img src={kenya} alt="Kenya" className={styles.loadingImage} />
         </div>
-      ) : (
-        <>
-          <div className={styles.topHalf} />
-          <div className={styles.bottomHalf} />
-          <div className={styles.ubahnContainer}>
-            <img src={ubahn} alt="ubahn" className={styles.ubahnImage} />
-          </div>
+      )}
+      <>
+        <div className={styles.topHalf} />
+        <div className={styles.bottomHalf} />
+        <div className={styles.ubahnContainer}>
+          <img src={ubahn} alt="ubahn" className={styles.ubahnImage} />
+        </div>
 
-          <img
-            src={berlinTower}
-            alt="berlinTower"
-            className={styles.berlinTowerImage}
-          />
-          <img
-            src={nairobiTower}
-            alt="nairobiTower"
-            className={styles.nairobiTowerImage}
-          />
-          <div className={styles.content}>
-            <div className={styles.centerContainer}>
-              <img src={bye} alt="bye" className={styles.byeImage} />
+        <img
+          src={berlinTower}
+          alt="berlinTower"
+          className={styles.berlinTowerImage}
+        />
+        <img
+          src={nairobiTower}
+          alt="nairobiTower"
+          className={styles.nairobiTowerImage}
+        />
+        <div className={styles.content}>
+          <div className={styles.centerContainer}>
+            <img src={bye} alt="bye" className={styles.byeImage} />
 
-              <div
-                className={styles.portraitContainer}
-                onClick={() => setIsModalOpen(true)}
-              >
-                <img
-                  src={portrait1}
-                  alt="portrait1"
-                  className={styles.portrait}
-                />
-                <img
-                  src={portrait2}
-                  alt="portrait2"
-                  className={styles.portrait}
-                />
-                <img
-                  src={portrait2}
-                  alt="portrait2"
-                  className={styles.portraitHover}
-                />
-              </div>
-              <img src={jambo} alt="jambo" className={styles.byeImage} />
-            </div>
-            <div className={styles.matatuContainer}>
-              <img src={matatu} alt="matatu" className={styles.matatuImage} />
+            <div
+              className={styles.portraitContainer}
+              onClick={() => setIsModalOpen(true)}
+            >
               <img
-                src={matatu2}
-                alt="matatu2"
-                className={styles.matatuImage2}
+                src={portrait1}
+                alt="portrait1"
+                className={styles.portrait}
+              />
+              <img
+                src={portrait2}
+                alt="portrait2"
+                className={styles.portrait}
+              />
+              <img
+                src={portrait2}
+                alt="portrait2"
+                className={styles.portraitHover}
               />
             </div>
+            <img src={jambo} alt="jambo" className={styles.byeImage} />
           </div>
+          <div className={styles.matatuContainer}>
+            <img src={matatu} alt="matatu" className={styles.matatuImage} />
+            <img src={matatu2} alt="matatu2" className={styles.matatuImage2} />
+          </div>
+        </div>
 
-          <Modal isOpen={isModalOpen} onClose={onCloseModal}>
-            <div className={styles.modalContainer}>
-              {response === null && !hasError && renderInitialContent()}
-              {response !== null && renderSubmittedContent()}
-              {hasError && renderErrorContent()}
-            </div>
-          </Modal>
-        </>
-      )}
+        <Modal isOpen={isModalOpen} onClose={onCloseModal}>
+          <div className={styles.modalContainer}>
+            {response === null && !hasError && renderInitialContent()}
+            {response !== null && renderSubmittedContent()}
+            {hasError && renderErrorContent()}
+          </div>
+        </Modal>
+      </>
     </div>
   );
 };
