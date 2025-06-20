@@ -108,7 +108,7 @@ const Invite: React.FunctionComponent = () => {
           KAOS Berlin, Schöneweide
           <br />
           S-Bahn / Tram
-          <br />(
+          <br />[
           <a
             href="https://g.co/kgs/WZ5gMvw"
             target="_blank"
@@ -116,7 +116,7 @@ const Invite: React.FunctionComponent = () => {
           >
             Directions
           </a>
-          ) (
+          ] [
           <a
             href="https://g.co/kgs/WZ5gMvw"
             target="_blank"
@@ -124,7 +124,7 @@ const Invite: React.FunctionComponent = () => {
           >
             Map
           </a>
-          )
+          ]
         </h4>
         <br />
         <h3 className={styles.subtitle}>When</h3>
@@ -136,14 +136,21 @@ const Invite: React.FunctionComponent = () => {
           We're moving 6200 kilometers, please no gifts 😅
           <br />
           <br />
-          Contributions to expenses and setting up our new home are very
-          appreciated
-          <br />
-          (Link)
+          Contributions towards moving costs and setting up our new home are
+          very appreciated
+          <br />[
+          <a
+            href="https://g.co/kgs/WZ5gMvw"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Link
+          </a>
+          ]
           <br />
         </h4>
         <br />
-        <h3 className={styles.subtitle}>Alcohol</h3>
+        <h3 className={styles.subtitle}>Drinks</h3>
         <h4 className={styles.body}>
           There is a staffed bar. We're putting enough cash back there for a few
           rounds each
@@ -157,8 +164,8 @@ const Invite: React.FunctionComponent = () => {
         <br />
         <h3 className={styles.subtitle}>Kids</h3>
         <h4 className={styles.body}>
-          Kids are welcome during the day. There is a kids play area. Be aware
-          that the venue is rather near the Spree
+          Kids are totally welcome during the day. There is a kids play area
+          provided. Be aware that the venue is very near the Spree
         </h4>
         <h3 className={styles.arrows}>⇩ ⇩ ⇩ ⇩</h3>
       </div>
