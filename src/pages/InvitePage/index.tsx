@@ -250,11 +250,6 @@ const Invite: React.FunctionComponent = () => {
               <img
                 src={portrait2}
                 alt="portrait2"
-                className={styles.portrait}
-              />
-              <img
-                src={portrait2}
-                alt="portrait2"
                 className={styles.portraitHover}
               />
             </div>
