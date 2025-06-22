@@ -51,7 +51,6 @@ const Invite: React.FunctionComponent = () => {
         }),
       })
         .then((res) => {
-          console.log(res);
           if (!res.ok || res.status !== 200) {
             setHasError(true);
             return;
@@ -59,7 +58,6 @@ const Invite: React.FunctionComponent = () => {
           return res.json();
         })
         .then((data) => {
-          console.log(data);
           if (data.success) {
             console.log('Success!');
             setResponse(attending);
