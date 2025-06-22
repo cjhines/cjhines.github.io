@@ -26,6 +26,7 @@ const Invite: React.FunctionComponent = () => {
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [isFadingOut, setIsFadingOut] = useState(false);
+  const hasSubmitted = name === submittedString;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -110,7 +111,7 @@ const Invite: React.FunctionComponent = () => {
   };
 
   const renderRSVPContent = () => {
-    if (name === submittedString) {
+    if (hasSubmitted) {
       return null;
     }
     return (
@@ -212,7 +213,7 @@ const Invite: React.FunctionComponent = () => {
           Kids are totally welcome during the day. There is a kids play area
           provided. Be aware that the venue is very near the Spree
         </h4>
-        <h3 className={styles.detailArrows}>⇩ ⇩ ⇩ ⇩</h3>
+        {!hasSubmitted && <h3 className={styles.detailArrows}>⇩ ⇩ ⇩ ⇩</h3>}
       </div>
       {renderRSVPContent()}
     </>
@@ -279,7 +280,7 @@ const Invite: React.FunctionComponent = () => {
         </div>
 
         <Modal
-          hideCloseButton={name === submittedString}
+          hideCloseButton={hasSubmitted}
           isOpen={isModalOpen}
           onClose={onCloseModal}
         >
