@@ -162,7 +162,7 @@ const Invite: React.FunctionComponent = () => {
           <br />
         </h4>
         <br />
-        <h3 className={styles.subtitle}>Kids</h3>
+        <h3 className={styles.subtitle}>Children</h3>
         <h4 className={styles.body}>
           Kids are totally welcome during the day. There is a kids play area
           provided. Be aware that the venue is very near the Spree
