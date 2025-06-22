@@ -9,7 +9,12 @@ type ModalProps = {
   className?: string;
 };
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, hideCloseButton }) => {
+const Modal: React.FC<ModalProps> = ({
+  isOpen,
+  onClose,
+  children,
+  hideCloseButton,
+}) => {
   if (!isOpen) return null;
 
   return (
