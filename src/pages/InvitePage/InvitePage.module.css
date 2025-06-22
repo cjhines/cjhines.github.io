@@ -446,6 +446,7 @@
   .detailsSection {
     flex: 1;
     justify-content: flex-start;
+    margin-bottom: 3rem;
     overflow-y: scroll;
   }
 
