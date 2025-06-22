@@ -15,6 +15,7 @@ import nairobiTower from './assets/nairobiTower.png';
 import wavePattern from './assets/wavePattern.svg';
 import ubahn from './assets/ubahn.png';
 import kenya from './assets/kenya.jpg';
+import map from './assets/map.png';
 
 const Invite: React.FunctionComponent = () => {
   const [name, setName] = useState('');
@@ -117,11 +118,7 @@ const Invite: React.FunctionComponent = () => {
             Directions
           </a>
           ] [
-          <a
-            href="https://g.co/kgs/WZ5gMvw"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={map} target="_blank" rel="noopener noreferrer">
             Map
           </a>
           ]
@@ -130,6 +127,8 @@ const Invite: React.FunctionComponent = () => {
         <h3 className={styles.subtitle}>When</h3>
         <h4 className={styles.body}>Saturday, July 12th</h4>
         <h4 className={styles.body}>15:00-22:00</h4>
+        <h4 className={styles.body}>Buffet opens ~5PM</h4>
+        <h4 className={styles.body}>Dancefloor opens ~7PM</h4>
         <br />
         <h3 className={styles.subtitle}>Gifts</h3>
         <h4 className={styles.body}>
@@ -158,8 +157,9 @@ const Invite: React.FunctionComponent = () => {
         <br />
         <h3 className={styles.subtitle}>Food</h3>
         <h4 className={styles.body}>
-          We're organising a nice buffet, but your cakes / salads / finger food
-          will be met with eager, hungry faces
+          We're organising a modest buffet. Any finger food / snacks / cakes /
+          salads will be met with eager, hungry faces
+          <br />
         </h4>
         <br />
         <h3 className={styles.subtitle}>Kids</h3>
