@@ -281,7 +281,11 @@ const Invite: React.FunctionComponent = () => {
           </div>
         </div>
 
-        <Modal isOpen={isModalOpen} onClose={onCloseModal}>
+        <Modal
+          hideCloseButton={name === submittedString}
+          isOpen={isModalOpen}
+          onClose={onCloseModal}
+        >
           <div className={styles.modalContainer}>
             {response === null && !hasError && renderInitialContent()}
             {response !== null && renderSubmittedContent()}
