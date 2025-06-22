@@ -83,6 +83,11 @@ const Invite: React.FunctionComponent = () => {
     </>
   );
 
+  const onReset = () => {
+    setResponse(null);
+    setHasError(false);
+  };
+
   const renderSubmittedContent = () => (
     <>
       <div className={styles.submittedContainer}>
@@ -91,6 +96,12 @@ const Invite: React.FunctionComponent = () => {
             ? 'Looking forward to celebrating with you!'
             : 'Hope to see you there!'}
         </h3>
+        <button
+          onClick={onReset}
+          className={styles.sendButton}
+        >
+          Back to details
+        </button>
       </div>
     </>
   );
