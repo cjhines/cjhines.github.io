@@ -17,6 +17,8 @@ import ubahn from './assets/ubahn.png';
 import kenya from './assets/kenya.jpg';
 import map from './assets/map.png';
 
+const submittedString = 'SUBMITTED_102381023';
+
 const Invite: React.FunctionComponent = () => {
   const [name, setName] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -83,7 +85,8 @@ const Invite: React.FunctionComponent = () => {
     </>
   );
 
-  const onReset = () => {
+  const goBackToDetails = () => {
+    setName(submittedString);
     setResponse(null);
     setHasError(false);
   };
@@ -96,7 +99,7 @@ const Invite: React.FunctionComponent = () => {
             ? 'Looking forward to celebrating with you!'
             : 'Hope to see you soon!'}
         </h3>
-        <button onClick={onReset} className={styles.submittedButton}>
+        <button onClick={goBackToDetails} className={styles.submittedButton}>
           Back to details
         </button>
       </div>
@@ -107,6 +110,43 @@ const Invite: React.FunctionComponent = () => {
     setIsModalOpen(false);
     setResponse(null);
     setHasError(false);
+  };
+
+  const renderRSVPContent = () => {
+    if (name === submittedString) {
+      return null;
+    }
+    return (
+      <div className={styles.rsvpSection}>
+        <h3 className={styles.rsvpArrows}>⇩ ⇩ ⇩ ⇩ ⇩ ⇩</h3>
+        <h2 className={styles.title}>Please RSVP</h2>
+        <div className={styles.formGroup}>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className={styles.input}
+            placeholder="Name / Names"
+          />
+        </div>
+        <button
+          onClick={() => sendRSVP(true)}
+          className={styles.sendButton}
+          disabled={!name.trim()}
+        >
+          See you there 🎉
+        </button>
+        <button
+          onClick={() => sendRSVP(false)}
+          className={styles.sendButton}
+          disabled={!name.trim()}
+        >
+          Can't make it 😔
+        </button>
+        <h3 className={styles.rsvpArrows}>⇧ ⇧ ⇧ ⇧ ⇧ ⇧</h3>
+      </div>
+    );
   };
 
   const renderInitialContent = () => (
@@ -177,35 +217,7 @@ const Invite: React.FunctionComponent = () => {
         </h4>
         <h3 className={styles.detailArrows}>⇩ ⇩ ⇩ ⇩</h3>
       </div>
-      <div className={styles.rsvpSection}>
-        <h3 className={styles.rsvpArrows}>⇩ ⇩ ⇩ ⇩ ⇩ ⇩</h3>
-        <h2 className={styles.title}>Please RSVP</h2>
-        <div className={styles.formGroup}>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className={styles.input}
-            placeholder="Name / Names"
-          />
-        </div>
-        <button
-          onClick={() => sendRSVP(true)}
-          className={styles.sendButton}
-          disabled={!name.trim()}
-        >
-          See you there 🎉
-        </button>
-        <button
-          onClick={() => sendRSVP(false)}
-          className={styles.sendButton}
-          disabled={!name.trim()}
-        >
-          Can't make it 😔
-        </button>
-        <h3 className={styles.rsvpArrows}>⇧ ⇧ ⇧ ⇧ ⇧ ⇧</h3>
-      </div>
+      {renderRSVPContent()}
     </>
   );
 
