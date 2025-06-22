@@ -508,6 +508,7 @@
   border-radius: 8px;
   font-size: 1.1rem;
   font-weight: 600;
+  margin-top: 16px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
