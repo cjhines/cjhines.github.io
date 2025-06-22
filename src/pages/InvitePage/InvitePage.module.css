@@ -501,6 +501,21 @@
   transition: all 0.2s ease;
 }
 
+.submittedButton {
+  width: 100%;
+  padding: 1rem;
+  background: #EF6325;
+  color: black;
+  border: none;
+  box-shadow: none;
+  max-width: 10vw;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
 a {
   color: #EF6325;
   text-decoration: none;

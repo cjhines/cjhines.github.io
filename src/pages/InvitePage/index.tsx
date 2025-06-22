@@ -94,9 +94,9 @@ const Invite: React.FunctionComponent = () => {
         <h3 className={styles.subtitle}>
           {response
             ? 'Looking forward to celebrating with you!'
-            : 'Hope to see you there!'}
+            : 'Hope to see you soon!'}
         </h3>
-        <button onClick={onReset} className={styles.sendButton}>
+        <button onClick={onReset} className={styles.submittedButton}>
           Back to details
         </button>
       </div>
