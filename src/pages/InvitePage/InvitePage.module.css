@@ -446,12 +446,15 @@
   .detailsSection {
     flex: 1;
     justify-content: flex-start;
-    margin-bottom: 3rem;
+    border-right: 9px dotted black;
+    padding-bottom: 3rem;
     overflow-y: scroll;
   }
 
   .rsvpSection {
     justify-content: flex-start;
+    padding-left: 4rem;
+    padding-right: 4rem;
     overflow-y: scroll;
   }
 
