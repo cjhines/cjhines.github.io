@@ -303,6 +303,7 @@
 .submittedContainer {
   display: flex;
   text-align: center;
+  margin-top: 10vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
