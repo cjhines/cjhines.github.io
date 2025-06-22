@@ -266,7 +266,16 @@
   font-display: swap;
 }
 
-.arrows {
+.detailArrows {
+  align-self: center;
+  text-align: center;
+  color: black;
+  font-size: 6rem;
+  line-height: 0;
+  font-weight: 900;
+}
+
+.rsvpArrows {
   align-self: center;
   text-align: center;
   color: black;
@@ -420,6 +429,11 @@
   .body {
     font-size: 1.2rem;
   }
+
+  .rsvpArrows {
+    font-size: 0;
+    display: none;
+  }
 }
 
 /* Landscape (width > height) */
@@ -437,7 +451,7 @@
     justify-content: flex-start;
   }
 
-  .arrows {
+  .detailArrows {
     font-size: 0;
     display: none;
   }

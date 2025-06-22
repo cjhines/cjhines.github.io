@@ -167,9 +167,10 @@ const Invite: React.FunctionComponent = () => {
           Kids are totally welcome during the day. There is a kids play area
           provided. Be aware that the venue is very near the Spree
         </h4>
-        <h3 className={styles.arrows}>⇩ ⇩ ⇩ ⇩</h3>
+        <h3 className={styles.detailArrows}>⇩ ⇩ ⇩ ⇩</h3>
       </div>
       <div className={styles.rsvpSection}>
+        <h3 className={styles.rsvpArrows}>⇩ ⇩ ⇩ ⇩ ⇩ ⇩</h3>
         <h2 className={styles.title}>Please RSVP</h2>
         <div className={styles.formGroup}>
           <input
@@ -195,6 +196,7 @@ const Invite: React.FunctionComponent = () => {
         >
           Can't make it 😔
         </button>
+        <h3 className={styles.rsvpArrows}>⇧ ⇧ ⇧ ⇧ ⇧ ⇧</h3>
       </div>
     </>
   );
