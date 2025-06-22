@@ -157,8 +157,8 @@ const Invite: React.FunctionComponent = () => {
         <br />
         <h3 className={styles.subtitle}>Food</h3>
         <h4 className={styles.body}>
-          We're organising a modest buffet. Any finger food / snacks / cakes /
-          salads will be met with eager, hungry faces
+          We're organising a modest (but tasty) buffet. Any finger food / snacks
+          / cakes / salads you can bring will be met with eager, hungry faces
           <br />
         </h4>
         <br />
