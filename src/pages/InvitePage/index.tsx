@@ -276,6 +276,7 @@ const Invite: React.FunctionComponent = () => {
           <div className={styles.matatuContainer}>
             <img src={matatu} alt="matatu" className={styles.matatuImage} />
             <img src={matatu2} alt="matatu2" className={styles.matatuImage2} />
+            <p className={styles.hiddenText}>hi</p>
           </div>
         </div>
 

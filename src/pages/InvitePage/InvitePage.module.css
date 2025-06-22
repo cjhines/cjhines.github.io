@@ -45,6 +45,10 @@
   box-sizing: border-box;
 }
 
+.hiddenText {
+  color: transparent;
+}
+
 @keyframes floatOne {
   0% {
     transform: translateY(var(--float-distance));
