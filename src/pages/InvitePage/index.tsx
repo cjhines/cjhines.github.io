@@ -151,7 +151,7 @@ const Invite: React.FunctionComponent = () => {
         <br />
         <h3 className={styles.subtitle}>Drinks</h3>
         <h4 className={styles.body}>
-          There is a staffed bar. We're putting enough cash back there for a few
+          There is a staffed bar. We're putting some cash back there for a few
           rounds each
         </h4>
         <br />
