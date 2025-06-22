@@ -96,10 +96,7 @@ const Invite: React.FunctionComponent = () => {
             ? 'Looking forward to celebrating with you!'
             : 'Hope to see you there!'}
         </h3>
-        <button
-          onClick={onReset}
-          className={styles.sendButton}
-        >
+        <button onClick={onReset} className={styles.sendButton}>
           Back to details
         </button>
       </div>
