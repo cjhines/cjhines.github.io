@@ -59,7 +59,6 @@ const Invite: React.FunctionComponent = () => {
         })
         .then((data) => {
           if (data.success) {
-            console.log('Success!');
             setResponse(attending);
           } else {
             setHasError(true);
