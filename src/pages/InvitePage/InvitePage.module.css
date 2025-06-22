@@ -440,6 +440,7 @@
 @media screen and (orientation: landscape) {
   .modalContainer {
     flex-direction: row;
+    overflow-y: visible;
   }
 
   .detailsSection {
@@ -449,6 +450,7 @@
 
   .rsvpSection {
     justify-content: flex-start;
+    overflow-y: scroll;
   }
 
   .detailArrows {
