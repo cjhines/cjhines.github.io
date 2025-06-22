@@ -139,7 +139,7 @@ const Invite: React.FunctionComponent = () => {
           very appreciated
           <br />[
           <a
-            href="https://g.co/kgs/WZ5gMvw"
+            href="https://www.paypal.com/donate/?hosted_button_id=P8AEGYZDXMSY4"
             target="_blank"
             rel="noopener noreferrer"
           >
